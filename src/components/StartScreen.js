@@ -1,5 +1,7 @@
-import React from 'react';
-import './StartScreenStyle.css';
+import React from "react";
+
+// Import the CSS file for this component
+import "./StartScreenStyle.css";
 
 export const StartScreen = () => {
   return (
