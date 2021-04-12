@@ -15,13 +15,8 @@ export const CurrentQuestion = () => {
 
   
   return (
-<<<<<<< HEAD
     <section className='current-question'>
       <div className='question-container'>
-=======
-    <>
-      <div className="question-container">
->>>>>>> df3478d2280ee17c2e5c6f83aa62506df90df0c8
         <h1>Question: {question.questionText}</h1>
         <p className="question-counter">Current question {}</p>
       </div>
