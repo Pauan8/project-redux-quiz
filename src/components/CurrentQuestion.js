@@ -15,18 +15,18 @@ export const CurrentQuestion = () => {
 
   return (
     <>
-      <div className='question-container'>
+      <div className="question-container">
         <h1>Question: {question.questionText}</h1>
-        <p className='question-counter'>Current question {}</p>
+        <p className="question-counter">Current question {}</p>
       </div>
-      <div className='button-container'>
-        <div className='buttons-inner'>
-            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className='answer-button'>{question.options[0]}</button>
-           <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className='answer-button'>{question.options[1]}</button>
+      <div className="button-container">
+        <div className="buttons-inner">
+            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[0]}</button>
+           <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[1]}</button>
         </div>
-        <div className='buttons-inner'>
-            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className='answer-button'>{question.options[2]}</button>
-            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className='answer-button'>{question.options[3]}</button>
+        <div className="buttons-inner">
+            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[2]}</button>
+            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[3]}</button>
         </div> 
       </div>
     </>
