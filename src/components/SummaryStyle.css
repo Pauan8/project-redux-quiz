@@ -9,13 +9,24 @@
 }
 
 .summary-card {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  width: 100%;
-  background-color: #bbded6;
-  margin-bottom: 40px;
-  padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbded6;
+    border-radius: 25px;
+  
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+  
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.27);
 }
 
 .summary-card__heading {

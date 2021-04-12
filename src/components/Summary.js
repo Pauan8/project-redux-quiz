@@ -9,7 +9,8 @@ export const Summary = () => {
         <h1 className="summary-card__heading">Summary</h1>
         <p className="summary-card__details">Your correct answers: 4/5</p>
         <p className="summary-card__precentage"> 20% accuracy </p>
+        <button className="play-again-btn">Play again</button>
       </div>
-      <button className="play-again-btn">Play again</button>
+     
   </section>);
 };
