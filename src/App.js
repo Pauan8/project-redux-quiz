@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { quiz } from "reducers/quiz";
 
