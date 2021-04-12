@@ -13,8 +13,9 @@ export const CurrentQuestion = () => {
     return <h1>Oh no! I could not find the current question!</h1>
   }
 
+  
   return (
-    <>
+    <section className='current-question'>
       <div className='question-container'>
         <h1>Question: {question.questionText}</h1>
         <p className='question-counter'>Current question {}</p>
@@ -29,6 +30,6 @@ export const CurrentQuestion = () => {
             <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className='answer-button'>{question.options[3]}</button>
         </div> 
       </div>
-    </>
+    </section>
   )
 }
