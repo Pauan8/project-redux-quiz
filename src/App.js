@@ -4,7 +4,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { quiz } from "reducers/quiz";
 
 import { CurrentQuestion } from "components/CurrentQuestion";
-import StartScreen from "./components/StartScreen";
+import { StartScreen } from "./components/StartScreen";
 
 const reducer = combineReducers({
   quiz: quiz.reducer,

@@ -2,13 +2,13 @@ import React from "react";
 
 import StartScreenStyle from "./StartScreenStyle.css";
 
-const StartScreen = () => {
+export const StartScreen = () => {
   return (
     <div className="start-screen-container">
-      <div>Some text goes here</div>
-      <button>Start Quiz</button>
+      <div className="text-button-wrapper">
+        <p className="start-screen-text">Welcome to this super awesome quiz!</p>
+        <button className="start-screen-button">Start Quiz</button>
+      </div>
     </div>
   );
 };
-
-export default StartScreen;
