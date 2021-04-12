@@ -1,0 +1,46 @@
+.start-screen-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fae3d9;
+  height: 100vh;
+  padding: 0px 30px;
+}
+
+/* This is the blueish/greenish box */
+.text-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbded6;
+  border-radius: 25px;
+  padding: 50px;
+  margin-top: 90px;
+
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.27);
+}
+
+.start-screen-text {
+  color: white;
+  text-align: center;
+}
+
+.start-screen-button {
+  -webkit-box-shadow: 0px 4px 5px #666666;
+  -moz-box-shadow: 0px 4px 5px #666666;
+  box-shadow: 0px 4px 5px #666666;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
+  background: #ffb6b8;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 0;
+}
+
+.start-screen-button:hover {
+  background: #ffc7c9;
+  text-decoration: none;
+}
