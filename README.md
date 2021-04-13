@@ -1,6 +1,6 @@
 # Redux quiz group project
 
-Building a sinpme quiz using React and redux.
+Building a simple quiz using React and redux.
 
 
 ## View it live
