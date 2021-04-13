@@ -3,9 +3,7 @@ import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { quiz } from 'reducers/quiz';
 
-import { CurrentQuestion } from 'components/CurrentQuestion';
-import { Summary } from './components/Summary';
-import { StartScreen } from './components/StartScreen';
+import {Navigation} from './components/Navigation'
 
 const reducer = combineReducers({
   quiz: quiz.reducer
@@ -14,11 +12,10 @@ const reducer = combineReducers({
 const store = configureStore({ reducer });
 
 export const App = () => {
+
   return (
     <Provider store={store}>
-      {/*  <StartScreen /> */}
-      {/* <Summary /> */}
-      <CurrentQuestion />
+      <Navigation />
     </Provider>
   );
 };

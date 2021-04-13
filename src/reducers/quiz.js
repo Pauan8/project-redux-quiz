@@ -2,6 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // Change these to your own questions!!
 const questions = [
+  {id: 0,
+  
+    questionText: "What is the most common colour of toilet paper in France?",
+    options: ["White", "Pink", "Light blue", "Black"],
+    correctAnswerIndex: 1,
+  },
   {
     id: 1,
     questionText: "What is the most common colour of toilet paper in France?",
@@ -23,7 +29,7 @@ const questions = [
   {
     id: 4,
     questionText: "What is the collective noun for a group of unicorns",
-    options: ["A blessing", "Multicorn", "Rhinos", "blabla"],
+    options: ["A blessing", "Multicorn", "Rhinos", "A rainbow"],
     correctAnswerIndex: 0,
   },
   {
