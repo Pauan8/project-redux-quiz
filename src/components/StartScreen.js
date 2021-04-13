@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider, useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { quiz } from "../reducers/quiz";
 
 // Import the CSS file for this component
