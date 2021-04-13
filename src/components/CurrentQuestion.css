@@ -3,7 +3,8 @@
 } */
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .current-question {
@@ -39,7 +40,7 @@ h1 {
 
 .question-counter {
   font-family: Arial;
-  font-size: 12px;
+  font-size: 18px;
   color: #61C0BF;
 }
 
@@ -66,11 +67,26 @@ h1 {
   font-family: Arial;
   color: #000000;
   font-size: 20px;
-  background: #ffb6b8;
+  background: #fff;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  width: 150px;
+  margin: 20px 10px;
 }
 
 .answer-button:hover {
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .question-container {
+    width: 500px;
+  }
+
+  .button-container {
+    width: 500px;
+  }
+
 }
