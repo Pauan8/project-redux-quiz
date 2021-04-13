@@ -20,12 +20,12 @@ const questions = [
   {
     id: 3,
     questionText: "What were the first ice hockey pucks made out of?",
-    options: ["Ice", "frozen cow dung", "A flattened ball", "Cheese"],
+    options: ["Ice", "Frozen cow dung", "A flattened ball", "Cheese"],
     correctAnswerIndex: 1,
   },
   {
     id: 4,
-    questionText: "What is the collective noun for a group of unicorns",
+    questionText: "What is the collective noun for a group of unicorns?",
     options: ["A blessing", "Multicorn", "Rhinos", "A rainbow"],
     correctAnswerIndex: 0,
   },

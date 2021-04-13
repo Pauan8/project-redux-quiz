@@ -23,16 +23,18 @@ export const Summary = () => {
         <p className="summary-card__precentage">
           {(correctAnswers.length / 5) * 100}% accuracy
         </p>
-        <h2>You got these questions wrong:</h2>
-        {wrongAnswer.map((item) => (
-          <div key={item.question.id} className="summary-card__wrong">
-            <p> {item.question.questionText}</p>
-            <p>
-              Correct answer:{" "}
-              {item.question.options[item.question.correctAnswerIndex]}
-            </p>
-          </div>
-        ))}
+        
+        {wrongAnswer.length === 0 ? (
+          <h2>Congrats, you got all questions right!</h2>
+        ) : ( <h2>You got these questions wrong:</h2>)}
+          {wrongAnswer.map((item) => (
+            <div key={item.question.id} className="summary-card__wrong">
+              <p> {item.question.questionText}</p>
+              <p>
+                Correct answer:{" "}
+                {item.question.options[item.question.correctAnswerIndex]}
+              </p>
+            </div>))}
         <button
           onClick={() => dispatch(quiz.actions.restart())}
           type="button"
