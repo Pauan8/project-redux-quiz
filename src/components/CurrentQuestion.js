@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz';
+import './CurrentQuestion.css' 
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
@@ -9,26 +10,37 @@ export const CurrentQuestion = () => {
   
   const dispatch = useDispatch();
 
+  const handleClick = (i) => {
+    console.log(question.id)
+    dispatch(quiz.actions.submitAnswer({questionId : question.id, answerIndex : i}))
+    dispatch(quiz.actions.goToNextQuestion())
+  }
+
   if (!question) {
     return <h1>Oh no! I could not find the current question!</h1>
   }
 
-  
+  console.log(question)
   return (
     <section className='current-question'>
       <div className='question-container'>
         <h1>Question: {question.questionText}</h1>
-        <p className="question-counter">Current question {}</p>
+        <p className="question-counter">Current question {question.id}</p>
       </div>
       <div className="button-container">
-        <div className="buttons-inner">
-            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[0]}</button>
-           <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[1]}</button>
+
+        {question.options.map((option, index) => 
+        (<div key={index} className="buttons-inner"><button onClick={() => handleClick(index)} 
+        className="answer-button">{option}</button></div>))}
+
+        {/* <div className="buttons-inner">
+            <button onClick={handleClick} className="answer-button">{question.options[0]}</button>
+           <button onClick={handleClick} className="answer-button">{question.options[1]}</button>
         </div>
         <div className="buttons-inner">
-            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[2]}</button>
-            <button onClick={() => dispatch(quiz.actions.goToNextQuestion())} className="answer-button">{question.options[3]}</button>
-        </div> 
+            <button onClick={handleClick} className="answer-button">{question.options[2]}</button>
+            <button onClick={handleClick} className="answer-button">{question.options[3]}</button>
+        </div>  */}
       </div>
     </section>
   )
