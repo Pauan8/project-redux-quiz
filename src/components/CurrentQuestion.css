@@ -4,7 +4,10 @@
 
 h1 {
   font-size: 30px;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 959ad4c071ffc28e8b74d0d5ab8b3b4c600feb50
 }
 
 .current-question {
@@ -47,6 +50,7 @@ h1 {
 .button-container {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
   background-color: #ffb6b9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -71,7 +75,11 @@ h1 {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   width: 150px;
+<<<<<<< HEAD
   margin: 20px 10px;
+=======
+  margin: 10px;
+>>>>>>> 959ad4c071ffc28e8b74d0d5ab8b3b4c600feb50
 }
 
 .answer-button:hover {

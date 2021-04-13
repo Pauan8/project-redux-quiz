@@ -20,7 +20,7 @@ export const CurrentQuestion = () => {
     return <h1>Oh no! I could not find the current question!</h1>
   }
 
-  console.log(question)
+  console.log(question.id)
   return (
     <section className='current-question'>
       <div className='question-container'>

@@ -6,6 +6,7 @@
     background-color: #fae3d9;
     padding: 40px;
     margin: 0;
+    align-items: center;
 }
 
 .summary-card {
@@ -58,3 +59,8 @@
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+    .summary-card {
+        width: 500px;
+    }
+}
