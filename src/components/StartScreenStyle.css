@@ -44,3 +44,9 @@
   background: #ffc7c9;
   text-decoration: none;
 }
+
+@media screen and (min-width: 768px) {
+  .text-button-wrapper {
+    width: 500px;
+  }
+}
