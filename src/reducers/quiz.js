@@ -3,11 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // Change these to your own questions!!
 const questions = [
   {
-    id: 0,
-
-    questionText: "What is the most common colour of toilet paper in France?",
-    options: ["White", "Pink", "Light blue", "Black"],
-    correctAnswerIndex: 1,
+    id: 0
   },
   {
     id: 1,
