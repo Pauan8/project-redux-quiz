@@ -1,24 +1,27 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { quiz } from '../reducers/quiz';
-import './CurrentQuestion.css'
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { quiz } from "../reducers/quiz";
+import "./CurrentQuestion.css";
 
 export const CurrentQuestion = () => {
-  const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
+  const question = useSelector(
+    (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
+  );
 
   const dispatch = useDispatch();
 
   const handleClick = (i) => {
-    dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: i }))
-    dispatch(quiz.actions.goToNextQuestion())
-    
-  }
+    dispatch(
+      quiz.actions.submitAnswer({ questionId: question.id, answerIndex: i })
+    );
+    dispatch(quiz.actions.goToNextQuestion());
+  };
 
   if (!question) {
-    return <h1>Oh no! I could not find the current question!</h1>
+    return <h1>Oh no! I could not find the current question!</h1>;
   }
 
-  console.log(question.id)
+  console.log(question.id);
   return (
     <section className="current-question">
       <div className="question-container">
@@ -26,12 +29,17 @@ export const CurrentQuestion = () => {
         <p className="question-counter">Current question {question.id}</p>
       </div>
       <div className="button-container">
-        {question.options.map((option, index) => (<div key={index} className="buttons-inner"><button className="answer-button"
-          onClick={() => handleClick(index)}
-          >{option}
-        </button>
-        </div>))}
+        {question.options.map((option, index) => (
+          <div key={index} className="buttons-inner">
+            <button
+              className="answer-button"
+              onClick={() => handleClick(index)}
+            >
+              {option}
+            </button>
+          </div>
+        ))}
       </div>
     </section>
-  )
-}
+  );
+};

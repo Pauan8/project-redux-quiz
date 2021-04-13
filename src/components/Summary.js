@@ -29,7 +29,7 @@ export const Summary = () => {
             <p> {item.question.questionText}</p>
             <p>
               Correct answer:{" "}
-             {item.question.options[item.question.correctAnswerIndex]}
+              {item.question.options[item.question.correctAnswerIndex]}
             </p>
           </div>
         ))}
