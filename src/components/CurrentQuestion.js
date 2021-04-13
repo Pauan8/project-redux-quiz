@@ -1,19 +1,17 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { quiz } from '../reducers/quiz';
-import './CurrentQuestion.css' 
+import './CurrentQuestion.css'
 
 export const CurrentQuestion = () => {
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
-  const quizOver = useSelector((state) => state.quiz.quizOver);
-  console.log(quizOver);
-  
+
   const dispatch = useDispatch();
 
   const handleClick = (i) => {
-    console.log(question.id)
-    dispatch(quiz.actions.submitAnswer({questionId : question.id, answerIndex : i}))
+    dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: i }))
     dispatch(quiz.actions.goToNextQuestion())
+    
   }
 
   if (!question) {
@@ -22,25 +20,17 @@ export const CurrentQuestion = () => {
 
   console.log(question.id)
   return (
-    <section className='current-question'>
-      <div className='question-container'>
+    <section className="current-question">
+      <div className="question-container">
         <h1>Question: {question.questionText}</h1>
         <p className="question-counter">Current question {question.id}</p>
       </div>
       <div className="button-container">
-
-        {question.options.map((option, index) => 
-        (<div key={index} className="buttons-inner"><button onClick={() => handleClick(index)} 
-        className="answer-button">{option}</button></div>))}
-
-        {/* <div className="buttons-inner">
-            <button onClick={handleClick} className="answer-button">{question.options[0]}</button>
-           <button onClick={handleClick} className="answer-button">{question.options[1]}</button>
-        </div>
-        <div className="buttons-inner">
-            <button onClick={handleClick} className="answer-button">{question.options[2]}</button>
-            <button onClick={handleClick} className="answer-button">{question.options[3]}</button>
-        </div>  */}
+        {question.options.map((option, index) => (<div key={index} className="buttons-inner"><button className="answer-button"
+          onClick={() => handleClick(index)}
+          >{option}
+        </button>
+        </div>))}
       </div>
     </section>
   )

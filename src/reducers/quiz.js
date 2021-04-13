@@ -67,7 +67,6 @@ export const quiz = createSlice({
      * and `answerIndex` keys. See the readme for more details.
      */
     submitAnswer: (state, action) => {
-      console.log(action)
       const { questionId, answerIndex } = action.payload;
       const question = state.questions.find((q) => q.id === questionId);
 
