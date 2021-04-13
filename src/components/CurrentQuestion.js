@@ -26,7 +26,7 @@ export const CurrentQuestion = () => {
     <section className="current-question">
       <div className="question-container">
         <h1>Question: {question.questionText}</h1>
-        <p className="question-counter">Current question {question.id}</p>
+        <p className="question-counter">Current question {question.id}/5</p>
       </div>
       <div className="button-container">
         {question.options.map((option, index) => (
